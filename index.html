@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e18">
+  <title>PING — COMP 376 exploration prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="identity"><span class="mark">◉</span><span>PING</span><span class="prototype">EXPLORATION PROTOTYPE 01</span></div>
+      <div class="topright"><span class="statusdot"></span><span id="status">SIGNAL UNKNOWN</span></div>
+    </header>
+
+    <section class="stage" aria-label="Playable maze game">
+      <canvas id="game" width="1140" height="660" aria-label="Dark maze. Move with WASD or arrow keys and press Space to scan."></canvas>
+      <div class="hud">
+        <div class="hudblock"><span class="hudlabel">OBJECTIVE</span><strong>REACH THE EXIT</strong></div>
+        <div class="hudblock right"><span class="hudlabel">SCAN</span><strong id="scanState">READY <span class="keycap">SPACE</span></strong></div>
+      </div>
+      <div id="overlay" class="overlay">
+        <div class="card">
+          <div class="eyebrow">FIELD TEST // 01</div>
+          <h1 id="overlayTitle">You can see the maze.<br>But it can hear you.</h1>
+          <p id="overlayText">Find the exit in the dark. A scan reveals the room for a moment. Something is waiting near the way out.</p>
+          <div class="instructions"><span><b>WASD</b> or <b>ARROWS</b> move</span><span><b>SPACE</b> scans</span></div>
+          <button id="primary" type="button">ENTER THE MAZE <span>→</span></button>
+          <p class="smallprint">Headphones optional · Desktop keyboard recommended</p>
+        </div>
+      </div>
+      <div id="toast" class="toast" aria-live="polite"></div>
+    </section>
+
+    <footer class="footer"><span>COMP 376 · INDIVIDUAL EXPLORATION</span><span>Find your own way through the dark.</span></footer>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
